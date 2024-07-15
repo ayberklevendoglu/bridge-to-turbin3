@@ -1,5 +1,6 @@
 import { Connection, Keypair, LAMPORTS_PER_SOL } from "@solana/web3.js";
-import wallet from "./dev-wallet.json";
+import wallet from "/home/bolti/.config/solana/risein.json";
+import { log } from "console";
 
 const keypair = Keypair.fromSecretKey(new Uint8Array(wallet));
 
@@ -7,7 +8,11 @@ const keypair = Keypair.fromSecretKey(new Uint8Array(wallet));
 const connection = new Connection("https://api.devnet.solana.com");
 
 (async () => {
+    // Check balance
+    const balance = await connection.getBalance(keypair.publicKey);
+    console.log("Your balance is: ", balance / LAMPORTS_PER_SOL);
     try {
+        
         // We're going to claim 2 devnet SOL tokens
         const txhash = await connection.requestAirdrop(keypair.publicKey, 2 * LAMPORTS_PER_SOL);
         console.log(`Success! Check out your TX here: 
