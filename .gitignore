@@ -1,0 +1,55 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Ignore node_modules folder
+node_modules/
+
+#Ignore dev wallet
+dev-wallet.json
+
+# Ignore built files and dependencies
+lib/
+target/
+dist/
+out/
+
+# Ignore IntelliJ project files
+.idea/
+*.iml
+
+# Ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Ignore local environment configuration
+.env
+*.local
+
+# Ignore npm and yarn lock files (optional, depending on your project setup)
+package-lock.json
+yarn.lock
+
+# Ignore compiled bytecode and other generated files
+*.o
+*.a
+*.d
+
+# Ignore generated keys
+*.key
+
+# Ignore the cache files
+.cache/
+.sol/
+
+# Ignore VS Code specific files
+.vscode/
+
+# Ignore Thrift-generated files
+gen/
+
+# Ignore macOS-specific files
+.DS_Store
+
+# Ignore other operating system files
+Thumbs.db
+Desktop.ini
