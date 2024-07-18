@@ -73,3 +73,12 @@ Enrolls the generated wallet in a specific program. The script does the followin
    ```bash
    yarn enroll
    ```
+
+## Notes
+
+- Ensure `dev-wallet.json` is generated and available before running any scripts other than `keygen.ts`.
+- Modify the scripts as needed to fit your specific use case or to add additional functionality.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
